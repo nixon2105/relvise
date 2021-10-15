@@ -43,6 +43,8 @@ body {
 .wrapper {
   min-height: 100%;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 ._container {
@@ -50,6 +52,19 @@ body {
   padding: 0 15px;
   margin: 0 auto;
   box-sizing: content-box;
+}
+
+._ibg {
+  position: relative;
+}
+
+._ibg img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
 }
 
 .header {
@@ -126,4 +141,124 @@ body {
   .menu__link {
     font-size: 18px;
   }
+}
+
+.page {
+  flex: 1 1 auto;
+}
+
+.page__main-block {
+}
+.main-block {
+  position: relative;
+}
+.main-block__container {
+}
+._container {
+}
+.main-block__body {
+  padding: 184px 0px 191px 0px;
+  position: relative;
+  z-index: 2;
+  max-width: 400px;
+}
+
+@media (max-width: 992px) {
+  .main-block__body {
+    padding: 120px 0px 191px 0px;
+  }
+}
+
+.main-block__body > *:not(:last-child) {
+  margin: 0px 0px 35px 0px;
+}
+.main-block-title {
+  font-size: 58px;
+  line-height: calc(80 / 50 * 100%);
+  letter-spacing: 0.2px;
+  font-weight: 800;
+}
+
+@media (max-width: 479px) {
+  .main-block-title {
+    font-size: 42px;
+  }
+}
+.main-block-text {
+  color: #737373;
+  font-size: 20px;
+  line-height: calc(30 / 20 * 100%);
+}
+
+@media (max-width: 479px) {
+  .main-block-text {
+    color: #5e5b5b;
+  }
+}
+
+.main-block-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -10px 0;
+}
+.main-block-button {
+  border-radius: 37px;
+  display: flex;
+  min-height: 48px;
+  letter-spacing: 0.2px;
+  font-weight: 700;
+  line-height: 150%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 36px;
+  margin: 10px 0;
+}
+
+@media (max-width: 479px) {
+  .main-block-button {
+    flex: 1 1 100%;
+  }
+}
+
+@media (min-width: 479px) {
+  .main-block-button:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.main-block-button:not(:last-child) {
+  margin-right: 10px;
+}
+
+.main-block-button_orange {
+  background: #ff7b47;
+  color: #fff;
+}
+.main-block-button_border {
+  color: #0d5c63;
+  border: 1px solid #0d5c63;
+}
+
+.main-block__image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+@media (max-width: 1300px) {
+  .main-block__image img {
+    object-position: right;
+  }
+}
+@media (max-width: 992px) {
+  .main-block__image img {
+    object-position: right;
+    opacity: 0.5;
+  }
+}
+
+.footer {
 }
